@@ -20,18 +20,15 @@ ENV JAVA_HOME /usr/java/default
 ENV PATH $PATH:$JAVA_HOME/bin 
 ENV java_path /usr/lib/jvm/java-8-openjdk-amd64 
  
-# RUN is a basic command in Dockerfile to run system call as in the terminal for buildi
-ng the Docker image 
+# RUN is a basic command in Dockerfile to run system call as in the terminal for building the Docker image 
 # You can install packages and download Hadoop using RUN command  
  
-# ADD file, hdfs-site.xml in the current directory, to the directory, $HADOOP_PREFIX/e
-tc/hadoop/hdfs-site.xml, in the image 
+# ADD file, hdfs-site.xml in the current directory, to the directory, $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml, in the image 
 ADD hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
- # EXPOSE informs Docker that the container listens on the specified network ports at r
-untime 
+
+# EXPOSE informs Docker that the container listens on the specified network ports at runtime 
 EXPOSE 50010 
  
-# CMD setups a call which is run when the docker image starts, which can be called on
-ce in the Dockerfile 
+# CMD setups a call which is run when the docker image starts, which can be called once in the Dockerfile 
 CMD ["/etc/bootstrap.sh", "-d"]
 ```
