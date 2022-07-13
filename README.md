@@ -1,6 +1,6 @@
 # Introduction to Hadoop 
 
-In this project, we setup Hadoop in docker, do basic pragramming in Hadoop such as n-gram and develop MapReduce programs to analyze a real anonymous logs to 
+In this project, we setup Hadoop in docker, do basic programming in Hadoop such as n-gram and develop MapReduce programs to analyze a real anonymous logs to 
 answer several questions based on the log. 
 
 ## Setting up Hadoop in docker
